@@ -28,9 +28,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors())
 
-app.get('/', (req, res) => {
-	res.send('this is working');
-})
+app.get('/', (req, res) => { res.send('this is working') })
 
 app.post('/signin', signin.handleSignin(db, bcrypt))
 
@@ -53,6 +51,6 @@ bcrypt.compare("veggies", hash, function(err, res) {
     // res = false
 });*/
 
-app.listen(3000, ()=> {
-	console.log('app is running on port 3000');
+app.listen(process.env.PORT || 3000, ()=> {
+	console.log('app is running on port ${process.env.PORT}');
 })
