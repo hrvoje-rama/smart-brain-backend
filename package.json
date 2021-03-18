@@ -5,7 +5,8 @@
   "main": "script.js",
   "scripts": {
     "start": "node server.js"
-  },
+}, 
+
   "keywords": [],
   "author": "Hrvoje Ramljak",
   "license": "ISC",
